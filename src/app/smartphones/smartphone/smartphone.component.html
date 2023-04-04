@@ -1,0 +1,19 @@
+<table class="p-5 mt-100 rounded-lg border">
+
+    <img [src]="smartphone.linkimg" [alt]=" smartphone.name " width="250" > 
+
+    <p class="infor">STT: {{ smartphone.id}} </p>
+
+    <p class="infor">Tên Sản Phẩm: {{ smartphone.name|titlecase }} </p>
+
+    <p class="infor">Người Sở Hữu: {{smartphone.owner|titlecase}} </p>
+
+    <p class="infor">Liên hệ: {{smartphone.contact}}</p>
+
+    <p class="infor">Giá: {{smartphone.amount | currency: "VND"}}</p>
+    
+    <button class="addToCart" *ngIf="!isInCart" (click)="addToCart()">Thêm vào giỏ hàng</button> 
+    <button class="removeFromCart" *ngIf="isInCart" (click)="removeFromCart()">Xóa khỏi giỏ hàng</button>
+
+</table>
+

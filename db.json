@@ -1,0 +1,44 @@
+{
+  "smartphones": [
+    {
+      "id": 1,
+      "name": "Poco x3 Pro",
+      "owner": "P.N.Đại",
+      "linkimg": "https://cdn.tgdd.vn/Products/Images/42/235486/xiaomi-poco-x3-pro-600x600-1-600x600.jpg",
+      "contact": 3674647435,
+      "amount": 6000000
+    },
+    {
+      "id": 2,
+      "name": "Iphone XR",
+      "owner": "Đ.H.Nguyên",
+      "linkimg": "https://galaxydidong.vn/wp-content/uploads/2014/09/iphone-xr-trang-galaxyddiong.jpg",
+      "contact": 5263849264,
+      "amount": 10000000
+    },
+    {
+      "id": 3,
+      "name": "Iphone 11 Pro Max",
+      "owner": "V.M.Hiếu",
+      "linkimg": "https://galaxydidong.vn/wp-content/uploads/2020/02/Iphone-11-pro-grey-1.jpg",
+      "contact": 2473827943,
+      "amount": 11000000
+    },
+    {
+      "id": 4,
+      "name": "Iphone 12 Pro Max",
+      "owner": "N.T.Quyền",
+      "linkimg": "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/1/_/1_251_1.jpg",
+      "contact": 5628647291,
+      "amount": 12000000
+    },
+    {
+      "id": 5,
+      "name": "Red Magic 6 Pro",
+      "owner": "Đ.H.Sang",
+      "linkimg": "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/z/t/zte_nubia_red_magic_6_pro_1-211083_1000x.jpg",
+      "contact": 7163537284,
+      "amount": 8000000
+    }
+  ]
+}

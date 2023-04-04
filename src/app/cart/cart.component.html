@@ -1,0 +1,8 @@
+<h1 >Giỏ Hàng Của Bạn</h1>
+<div *ngIf="getCart().length>0" >
+    <div *ngFor="let smartphone of getCart(); let i=index;">
+        <p class="my-4 text-2xl">{{i+1}}. {{smartphone.name}} : {{smartphone.amount | currency: "VND"}}</p>
+    </div>
+</div> 
+
+<div *ngIf="getCart().length == 0">Không có Sản Phẩm trong Giỏ Hàng của bạn</div>

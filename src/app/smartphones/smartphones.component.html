@@ -1,0 +1,12 @@
+<div class="khung">
+<h2>Danh Sách Điện Thoại</h2>
+<button class="btn1" (click)="this.isShowing=!this.isShowing">
+    <ng-container *ngIf="isShowing">Ẩn Danh Sách Điện Thoại</ng-container>
+    <ng-container *ngIf="!isShowing">Xem Danh Sách Điện Thoại</ng-container>
+</button>
+<ul *ngIf="isShowing ">
+    <ng-container *ngFor="let singleSmartphone of smartphones; let i=index">
+    <app-smartphone  [smartphone]="singleSmartphone"></app-smartphone>
+    </ng-container>
+</ul> 
+</div>

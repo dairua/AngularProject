@@ -1,0 +1,30 @@
+<div class="khung">
+    <form (ngSubmit)="submit()" #myForm="ngForm" class="container">
+        <h1>Register</h1>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="form-input" placeholder="Email Address" [(ngModel)]="form.email" name="email" #email="ngModel" required>
+        </div>
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="form-thongbao">Email Không Hợp Lệ</div>
+        
+        <div>
+            <label for="password">PassWord:</label>
+            <input type="password" id="password" class="form-input" placeholder="Password" [(ngModel)]="form.password" name="password" #password="ngModel" required>
+        </div>
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="form-thongbao">PassWord Không Hợp Lệ</div>
+
+        <div>
+            <label for="confirmpassword">Confirm PassWord:</label>
+            <input type="confirmpassword" id="confirmpassword" class="form-input" placeholder="Confirm Password" [(ngModel)]="form.confirmpassword" name="confirmpassword" #confirmpassword="ngModel" required>
+        </div>
+        <div *ngIf="confirmpassword.invalid && (confirmpassword.dirty || confirmpassword.touched)" class="form-thongbao">ConfirmPassword Không Hợp Lệ</div>
+
+        <div class="clearfix">
+            <button type="submit" class="signupbtn" [disabled]="myForm.form.invalid">
+                <ng-container *ngIf="isLoading()">Loading...</ng-container>
+                <ng-container *ngIf="!isLoading()">Submit</ng-container>
+            </button>
+        </div>
+    </form>
+</div>

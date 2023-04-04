@@ -1,0 +1,85 @@
+<div>
+    <div>
+        <h2>Smartphone-Management</h2>
+    </div>
+
+    <div class="khung">
+
+        <div class="tbedit">
+            <form [formGroup]="empForm">
+            <legend>
+                Update Smartphone
+            </legend>
+        
+            <div class="row"><div class="col-25">
+                <label for="name">Tên SP:</label>
+            </div>
+            <div class="col-75"><input id="name" type="text" name="name" ngModel formControlName="name"></div></div>
+            
+            <div class="row"><div class="col-25">
+                <label for="owner">Người Sở Hữu:</label>
+            </div>
+            <div class="col-75"><input id="owner" type="text" name="owner"  ngModel formControlName="owner"></div></div>
+            
+            <div class="row"><div class="col-25">
+                <label for="linkimg">Ảnh:</label>
+            </div>
+            <div class="col-75"><input id="linkimg" type="text" name="linkimg" ngModel formControlName="linkimg"></div></div>
+            
+            <div class="row"><div class="col-25">
+                <label for="contact">Liên Hệ:</label>
+            </div>
+            <div class="col-75"><input id="contact" type="number" name="contact" ngModel formControlName="contact"></div></div>
+           
+            <div class="row"><div class="col-25">
+                <label for="amount">Giá:</label>
+            </div>
+            <div class="col-75"><input id="amount" type="number" name="amount" ngModel formControlName="amount"></div></div>
+            
+        
+            <div class="row"><button type="submit" (click)="onUpdateSmartphone()">CẬP NHẬT</button></div>
+            
+        </form>
+    </div>
+        
+
+
+
+        <div class="middiv"><legend>SHOW PHONE LIST</legend></div>
+
+
+        <div>
+            <button [routerLink]="['/add']" class="buttonadd">ADD Smartphone</button>
+        </div>
+        
+
+        <table class="fl-table">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên Sản Phẩm</th>
+                    <th>Người Sở Hữu</th>
+                    <th>Ảnh</th>
+                    <th>Liên Hệ</th>
+                    <th>Giá</th>
+                    <th>Hành Động</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let item of smartphones; let i=index">
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.owner}}</td>
+                    <td>{{item.linkimg}}</td>
+                    <td>{{item.contact}}</td>
+                    <td>{{item.amount| currency :'VND'}}</td>
+                    <td>
+                        <button  class="buttonedit" (click)="editer(item.id)">Edit</button>
+                        <button (click)="onDeletesmartphone(item.id)" class="buttondelete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

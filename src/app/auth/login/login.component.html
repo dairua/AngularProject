@@ -1,0 +1,22 @@
+
+<div class="khung">
+    <form (ngSubmit)="submit()" #myForm="ngForm" class="container">
+        <h1>Login</h1>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="form-input" placeholder="Email Address" [(ngModel)]="form.email" name="email">
+        </div>
+        
+        <div>
+            <label for="password">PassWord:</label>
+            <input type="password" id="password" class="form-input" placeholder="Password" [(ngModel)]="form.password" name="password">
+        </div>
+
+        <div class="clearfix">
+            <button type="submit" class="signupbtn" [disabled]="myForm.form.invalid" >
+                <ng-container *ngIf="isLoading()">Loading...</ng-container>
+                <ng-container *ngIf="!isLoading()">Submit</ng-container>
+            </button>
+        </div>
+    </form>
+</div>

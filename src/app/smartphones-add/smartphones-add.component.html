@@ -1,0 +1,38 @@
+<div class="khung">
+<div class="container">
+    <form [formGroup]="empForm">
+    <legend>
+        Add Smartphone
+    </legend>
+
+    <div class="row"><div class="col-25">
+        <label for="">Tên SP</label>
+    </div>
+    <div class="col-75"><input type="text" name="name" ngModel formControlName="name"></div></div>
+    
+    <div class="row"><div class="col-25">
+        <label for="">Người Sở Hữu</label>
+    </div>
+    <div class="col-75"><input type="text" name="owner"  ngModel formControlName="owner"></div></div>
+    
+    <div class="row"><div class="col-25">
+        <label for="">Ảnh</label>
+    </div>
+    <div class="col-75"><input type="text" name="linkimg" ngModel formControlName="linkimg"></div></div>
+    
+    <div class="row"><div class="col-25">
+        <label for="">Liên Hệ</label>
+    </div>
+    <div class="col-75"><input type="number" name="contact" ngModel formControlName="contact"></div></div>
+   
+    <div class="row"><div class="col-25">
+        <label for="">Giá</label>
+    </div>
+    <div class="col-75"><input type="number" name="amount" ngModel formControlName="amount"></div></div>
+    
+
+    <div class="row"><button type="submit" (click)="onAddSmartphone()">LƯU</button></div>
+    
+</form>
+</div>
+</div>

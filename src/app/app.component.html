@@ -1,0 +1,19 @@
+
+
+    <div class="header">
+        <a  routerLink="/">SmartPhone Shop</a>
+    </div>
+
+    <div class="topnav">
+        <a  routerLink="/cart">Giỏ Hàng của Tôi</a>
+        <a  routerLink="/list">Tác Vụ</a>
+        <ng-container *ngIf="!isAuthenticated()">
+            <a  routerLink="/login">Đăng Nhập</a>
+            <a  routerLink="/register">Đăng Kí</a>
+        </ng-container>
+        <ng-container *ngIf="isAuthenticated()">
+            <button (click)="logout()"class="btnDX">Đăng Xuất</button>
+        </ng-container>
+    </div>
+
+<div><router-outlet></router-outlet></div>
